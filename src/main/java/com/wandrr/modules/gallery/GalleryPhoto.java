@@ -32,7 +32,7 @@ public class GalleryPhoto {
     @Column(name = "image_url", nullable = false)
     private String imageUrl;
 
-    @Column(name = "cloudinary_id", nullable = false)
+    @Column(name = "cloudinary_id")
     private String cloudinaryId;
 
     @Column(columnDefinition = "TEXT")
@@ -41,6 +41,10 @@ public class GalleryPhoto {
     @Column(name = "is_featured")
     @Builder.Default
     private boolean isFeatured = false;
+
+    @Column(name = "is_personal", nullable = false)
+    @Builder.Default
+    private boolean isPersonal = false;
 
     @Column(name = "created_at", updatable = false)
     @CreationTimestamp
