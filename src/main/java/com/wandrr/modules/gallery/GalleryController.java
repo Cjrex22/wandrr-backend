@@ -37,17 +37,27 @@ public class GalleryController {
     public ResponseEntity<ApiResponse<List<GalleryPhotoDTO>>> getPhotos(
             @RequestParam(required = false) UUID tripId,
             @RequestParam(required = false) Boolean featured,
-            @RequestParam(defaultValue = "6") int limit) {
+            @RequestParam(defaultValue = "6") int limit,
+            @AuthenticationPrincipal UserDetails principal) {
+
+        User user = userRepository.findByEmail(principal.getUsername())
+                .orElseThrow(() -> new ResourceNotFoundException("User not found."));
 
         PageRequest pageable = PageRequest.of(0, limit, Sort.by("createdAt").descending());
         Page<GalleryPhoto> photos;
 
         if (tripId != null) {
+            // VERIFY MEMBERSHIP
+            if (!tripMemberRepository.existsByTripIdAndUserId(tripId, user.getId())) {
+                throw new UnauthorizedException("You are not a member of this trip.");
+            }
             photos = galleryRepository.findByTripId(tripId, pageable);
         } else if (Boolean.TRUE.equals(featured)) {
+            // For landing page or global featured (if still allowed)
             photos = galleryRepository.findByIsFeaturedTrue(pageable);
         } else {
-            photos = galleryRepository.findAll(pageable);
+            // Deny global unfiltered gallery reads for security
+            throw new UnauthorizedException("Cannot fetch global gallery without a trip context.");
         }
 
         List<GalleryPhotoDTO> dtos = photos.getContent().stream()

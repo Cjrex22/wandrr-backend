@@ -8,7 +8,6 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
-import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
 @RestController
@@ -23,14 +22,13 @@ public class ExpenseReportController {
             @PathVariable UUID tripId,
             @AuthenticationPrincipal UserDetails principal) {
 
-        String report = reportService.generateReport(tripId, principal.getUsername());
-        byte[] content = report.getBytes(StandardCharsets.UTF_8);
+        byte[] pdfBytes = reportService.generateReport(tripId, principal.getUsername());
 
         return ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION,
-                        "attachment; filename=wandrr-expense-report-" + tripId + ".txt")
-                .contentType(MediaType.TEXT_PLAIN)
-                .contentLength(content.length)
-                .body(content);
+                        "attachment; filename=wandrr-expense-report-" + tripId + ".pdf")
+                .contentType(MediaType.APPLICATION_PDF)
+                .contentLength(pdfBytes.length)
+                .body(pdfBytes);
     }
 }
