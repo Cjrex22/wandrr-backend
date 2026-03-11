@@ -1,0 +1,308 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.wandrr:wandrr-backend >----------------------
+[INFO] Building wandrr-backend 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.5:run (default-cli) > test-compile @ wandrr-backend >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ wandrr-backend ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 8 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ wandrr-backend ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ wandrr-backend ---
+[INFO] skip non existing resourceDirectory /Users/adityatati/Desktop/travelws/wandrr-backend/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ wandrr-backend ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.5:run (default-cli) < test-compile @ wandrr-backend <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.5:run (default-cli) @ wandrr-backend ---
+[INFO] Attaching agents: []
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-03-11T09:34:17.047+05:30  INFO 10282 --- [wandrr-backend] [           main] com.wandrr.WandrrApplication             : Starting WandrrApplication using Java 25.0.1 with PID 10282 (/Users/adityatati/Desktop/travelws/wandrr-backend/target/classes started by adityatati in /Users/adityatati/Desktop/travelws/wandrr-backend)
+2026-03-11T09:34:17.047+05:30  INFO 10282 --- [wandrr-backend] [           main] com.wandrr.WandrrApplication             : The following 1 profile is active: "dev"
+2026-03-11T09:34:17.278+05:30  INFO 10282 --- [wandrr-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-11T09:34:17.279+05:30  INFO 10282 --- [wandrr-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-11T09:34:17.327+05:30  INFO 10282 --- [wandrr-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 9 JPA repository interfaces.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/adityatati/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.20/tomcat-embed-core-10.1.20.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-03-11T09:34:17.501+05:30  INFO 10282 --- [wandrr-backend] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-11T09:34:17.505+05:30  INFO 10282 --- [wandrr-backend] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-11T09:34:17.505+05:30  INFO 10282 --- [wandrr-backend] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-11T09:34:17.527+05:30  INFO 10282 --- [wandrr-backend] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-11T09:34:17.528+05:30  INFO 10282 --- [wandrr-backend] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 466 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-03-11T09:34:17.538+05:30  INFO 10282 --- [wandrr-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-11T09:34:17.596+05:30  INFO 10282 --- [wandrr-backend] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:wandrrdb user=SA
+2026-03-11T09:34:17.597+05:30  INFO 10282 --- [wandrr-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-11T09:34:17.600+05:30  INFO 10282 --- [wandrr-backend] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:wandrrdb'
+2026-03-11T09:34:17.641+05:30  INFO 10282 --- [wandrr-backend] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-11T09:34:17.665+05:30  INFO 10282 --- [wandrr-backend] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-11T09:34:17.676+05:30  INFO 10282 --- [wandrr-backend] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-11T09:34:17.744+05:30  INFO 10282 --- [wandrr-backend] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-11T09:34:17.758+05:30  WARN 10282 --- [wandrr-backend] [           main] org.hibernate.dialect.Dialect            : HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2026-03-11T09:34:17.760+05:30  WARN 10282 --- [wandrr-backend] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-11T09:34:18.088+05:30  INFO 10282 --- [wandrr-backend] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    alter table if exists app_content 
+       drop constraint if exists FKpm2mf7c4olhq77s788rrwdoeh
+Hibernate: 
+    alter table if exists expense_splits 
+       drop constraint if exists FKqigr3qe91wgifpl6mak0xcdso
+Hibernate: 
+    alter table if exists expense_splits 
+       drop constraint if exists FKnikv7drxxkj9x862du3r4ruam
+Hibernate: 
+    alter table if exists expenses 
+       drop constraint if exists FKiwqbj8x69qhvj7a41f5r3xy10
+Hibernate: 
+    alter table if exists expenses 
+       drop constraint if exists FK9twvm79qw1voae3xgtn1xq5y9
+Hibernate: 
+    alter table if exists gallery_photos 
+       drop constraint if exists FK36bnykhsad099re6emt3umv4
+Hibernate: 
+    alter table if exists gallery_photos 
+       drop constraint if exists FK7svwduu2n1bucmxasj1r1v9qb
+Hibernate: 
+    alter table if exists otp_tokens 
+       drop constraint if exists FKjyk2kyj8ul2bjqjpentlrpyi1
+Hibernate: 
+    alter table if exists trip_members 
+       drop constraint if exists FKlrwxwvuaj3iddljvck3c3gtqr
+Hibernate: 
+    alter table if exists trip_members 
+       drop constraint if exists FK652lcpk0gdigjfm28bhgu24y2
+Hibernate: 
+    alter table if exists trips 
+       drop constraint if exists FKc4x3abgpcmxs8xcr9f238fpby
+Hibernate: 
+    drop table if exists app_content cascade
+Hibernate: 
+    drop table if exists expense_splits cascade
+Hibernate: 
+    drop table if exists expenses cascade
+Hibernate: 
+    drop table if exists gallery_photos cascade
+Hibernate: 
+    drop table if exists otp_tokens cascade
+Hibernate: 
+    drop table if exists trip_members cascade
+Hibernate: 
+    drop table if exists trips cascade
+Hibernate: 
+    drop table if exists user_buddies cascade
+Hibernate: 
+    drop table if exists users cascade
+Hibernate: 
+    create table app_content (
+        updated_at timestamp(6),
+        id uuid not null,
+        updated_by uuid,
+        section varchar(255) not null unique check (section in ('MISSION','ABOUT_US','SOCIAL_LINKS')),
+        content_json jsonb not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table expense_splits (
+        is_settled boolean,
+        split_amount numeric(10,2) not null,
+        settled_at timestamp(6),
+        expense_id uuid not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table expenses (
+        include_self boolean,
+        total_amount numeric(10,2) not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        id uuid not null,
+        paid_by uuid not null,
+        trip_id uuid not null,
+        title varchar(150) not null,
+        description TEXT,
+        primary key (id)
+    )
+Hibernate: 
+    create table gallery_photos (
+        is_featured boolean,
+        is_personal boolean not null,
+        created_at timestamp(6),
+        id uuid not null,
+        trip_id uuid,
+        uploaded_by uuid not null,
+        caption TEXT,
+        cloudinary_id varchar(255),
+        image_url varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table otp_tokens (
+        used boolean not null,
+        created_at timestamp(6),
+        expires_at timestamp(6) not null,
+        id uuid not null,
+        user_id uuid not null,
+        otp_hash varchar(255) not null,
+        purpose varchar(255) check (purpose in ('PASSWORD_RESET','EMAIL_VERIFY')),
+        primary key (id)
+    )
+Hibernate: 
+    create table trip_members (
+        joined_at timestamp(6),
+        id uuid not null,
+        trip_id uuid not null,
+        user_id uuid not null,
+        role varchar(255) check (role in ('ADMIN','MEMBER')),
+        primary key (id)
+    )
+Hibernate: 
+    create table trips (
+        end_date date,
+        start_date date,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        created_by uuid not null,
+        id uuid not null,
+        name varchar(150) not null,
+        banner_url varchar(255),
+        description TEXT,
+        status varchar(255) check (status in ('PLANNING','CONFIRMED','COMPLETED')),
+        primary key (id)
+    )
+Hibernate: 
+    create table user_buddies (
+        added_at timestamp(6),
+        buddy_id uuid not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id),
+        unique (user_id, buddy_id)
+    )
+Hibernate: 
+    create table users (
+        is_verified boolean,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        id uuid not null,
+        username varchar(50) not null unique,
+        full_name varchar(100) not null,
+        email varchar(150) not null unique,
+        avatar_url varchar(255),
+        bio TEXT,
+        password_hash varchar(255) not null,
+        role varchar(255) check (role in ('USER','ADMIN')),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists app_content 
+       add constraint FKpm2mf7c4olhq77s788rrwdoeh 
+       foreign key (updated_by) 
+       references users
+Hibernate: 
+    alter table if exists expense_splits 
+       add constraint FKqigr3qe91wgifpl6mak0xcdso 
+       foreign key (expense_id) 
+       references expenses
+Hibernate: 
+    alter table if exists expense_splits 
+       add constraint FKnikv7drxxkj9x862du3r4ruam 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists expenses 
+       add constraint FKiwqbj8x69qhvj7a41f5r3xy10 
+       foreign key (paid_by) 
+       references users
+Hibernate: 
+    alter table if exists expenses 
+       add constraint FK9twvm79qw1voae3xgtn1xq5y9 
+       foreign key (trip_id) 
+       references trips
+Hibernate: 
+    alter table if exists gallery_photos 
+       add constraint FK36bnykhsad099re6emt3umv4 
+       foreign key (trip_id) 
+       references trips
+Hibernate: 
+    alter table if exists gallery_photos 
+       add constraint FK7svwduu2n1bucmxasj1r1v9qb 
+       foreign key (uploaded_by) 
+       references users
+Hibernate: 
+    alter table if exists otp_tokens 
+       add constraint FKjyk2kyj8ul2bjqjpentlrpyi1 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists trip_members 
+       add constraint FKlrwxwvuaj3iddljvck3c3gtqr 
+       foreign key (trip_id) 
+       references trips
+Hibernate: 
+    alter table if exists trip_members 
+       add constraint FK652lcpk0gdigjfm28bhgu24y2 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists trips 
+       add constraint FKc4x3abgpcmxs8xcr9f238fpby 
+       foreign key (created_by) 
+       references users
+2026-03-11T09:34:18.112+05:30  INFO 10282 --- [wandrr-backend] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-11T09:34:18.188+05:30  INFO 10282 --- [wandrr-backend] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-11T09:34:18.573+05:30  WARN 10282 --- [wandrr-backend] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-11T09:34:18.660+05:30  INFO 10282 --- [wandrr-backend] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3ea9b180, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b9a2df7, org.springframework.security.web.context.SecurityContextHolderFilter@1fbe9d4, org.springframework.security.web.header.HeaderWriterFilter@1812ba7f, org.springframework.web.filter.CorsFilter@31725f55, org.springframework.security.web.authentication.logout.LogoutFilter@7bf4fa70, com.wandrr.security.JwtAuthFilter@148b13e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f69937a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@717d3b2b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6797120c, org.springframework.security.web.session.SessionManagementFilter@2494847f, org.springframework.security.web.access.ExceptionTranslationFilter@703be135, org.springframework.security.web.access.intercept.AuthorizationFilter@3c6935ef]
+2026-03-11T09:34:18.736+05:30  INFO 10282 --- [wandrr-backend] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-11T09:34:18.740+05:30  INFO 10282 --- [wandrr-backend] [           main] com.wandrr.WandrrApplication             : Started WandrrApplication in 1.822 seconds (process running for 1.931)
+2026-03-11T09:34:39.368+05:30  INFO 10282 --- [wandrr-backend] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-11T09:34:39.368+05:30  INFO 10282 --- [wandrr-backend] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-11T09:34:39.369+05:30  INFO 10282 --- [wandrr-backend] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+2026-03-11T09:34:39.723+05:30  INFO 10282 --- [wandrr-backend] [nio-8080-exec-1] com.wandrr.modules.auth.AuthService      : New user registered: localtest2@example.com
+Hibernate: 
+    insert 
+    into
+        users
+        (avatar_url, bio, created_at, email, full_name, is_verified, password_hash, role, updated_at, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)

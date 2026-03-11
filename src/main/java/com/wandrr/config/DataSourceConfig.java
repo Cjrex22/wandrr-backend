@@ -44,7 +44,9 @@ public class DataSourceConfig {
                 String path = uri.getPath();
                 String jdbcUrl = "jdbc:postgresql://" + host + ":" + port + path;
                 if (uri.getQuery() != null) {
-                    jdbcUrl += "?" + uri.getQuery();
+                    jdbcUrl += "?" + uri.getQuery() + "&stringtype=unspecified";
+                } else {
+                    jdbcUrl += "?stringtype=unspecified";
                 }
 
                 String userInfo = uri.getUserInfo();
