@@ -75,7 +75,9 @@ public class AuthService {
 
         Cookie refreshCookie = new Cookie("refresh_token", refreshToken);
         refreshCookie.setHttpOnly(true);
-        refreshCookie.setSecure(true);
+        // Secure must be false on localhost (HTTP). On Render/HTTPS it should be true.
+        String env = System.getenv("SPRING_PROFILES_ACTIVE");
+        refreshCookie.setSecure(env != null && env.contains("prod"));
         refreshCookie.setPath("/");
         refreshCookie.setMaxAge(7 * 24 * 60 * 60);
         response.addCookie(refreshCookie);
@@ -141,7 +143,8 @@ public class AuthService {
 
         Cookie refreshCookie = new Cookie("refresh_token", newRefreshToken);
         refreshCookie.setHttpOnly(true);
-        refreshCookie.setSecure(true);
+        String envRefresh = System.getenv("SPRING_PROFILES_ACTIVE");
+        refreshCookie.setSecure(envRefresh != null && envRefresh.contains("prod"));
         refreshCookie.setPath("/");
         refreshCookie.setMaxAge(7 * 24 * 60 * 60);
         response.addCookie(refreshCookie);

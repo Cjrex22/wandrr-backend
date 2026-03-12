@@ -25,6 +25,16 @@ public class UserService {
     private final TripRepository tripRepository;
     private final UserBuddyRepository buddyRepository;
 
+    public User getUserEntityByEmail(String email) {
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found."));
+    }
+
+    public User getUserEntityById(UUID id) {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found."));
+    }
+
     public ApiResponse<UserProfileDTO> getMyProfile(String email) {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found."));

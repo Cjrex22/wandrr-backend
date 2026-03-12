@@ -24,6 +24,7 @@ public class AppContent {
     private UUID id;
 
     @Enumerated(EnumType.STRING)
+    @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     @Column(unique = true, nullable = false)
     private Section section;
 

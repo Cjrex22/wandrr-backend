@@ -35,5 +35,14 @@ spring:
       - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
 
 app:
+app:
   from-email: noreply@wandrr.dev
   frontend-url: http://localhost:5173
+
+# External API Keys (User will fill these in via application.properties)
+gemini.api.key=${GEMINI_API_KEY:PASTE_YOUR_GEMINI_KEY_HERE}
+amadeus.client.id=${AMADEUS_CLIENT_ID:PASTE_YOUR_AMADEUS_CLIENT_ID_HERE}
+amadeus.client.secret=${AMADEUS_CLIENT_SECRET:PASTE_YOUR_AMADEUS_CLIENT_SECRET_HERE}
+openweather.api.key=${OPENWEATHER_API_KEY:PASTE_YOUR_OPENWEATHER_KEY_HERE}
+unsplash.access.key=${UNSPLASH_ACCESS_KEY:PASTE_YOUR_UNSPLASH_KEY_HERE}
+google.places.api.key=${GOOGLE_PLACES_API_KEY:PASTE_YOUR_GOOGLE_PLACES_KEY_HERE}

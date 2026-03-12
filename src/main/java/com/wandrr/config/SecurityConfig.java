@@ -45,6 +45,10 @@ public class SecurityConfig {
                         .requestMatchers(
                                 "/api/auth/**",
                                 "/api/content/**",
+                                "/api/destinations/**",
+                                "/api/packages/**",
+                                "/api/photos/**",
+                                "/api/weather/**",
                                 "/api/stats")
                         .permitAll()
                         .anyRequest().authenticated())
